@@ -26,11 +26,12 @@ $(document).ready(function(){
     		console.log("data inválida");
     		var error = '<span id="dataFinal-error" class="">A Data de fim deve ser maior que a data de inicio.</span>'
     		$('[data-valmsg-for="dataFinal"]').removeClass("field-validation-valid").addClass("field-validation-error").html(error);
-    		$("#dataFinal").parent("div").addClass(".has-error");
+    		$("#dataFinal").addClass("input-validation-error");
     		return false;
     	}
     	else{
     		console.log("data válida");
+    		$("#dataFinal").removeClass("input-validation-error");
     		$('[data-valmsg-for="dataFinal"]').removeClass("field-validation-valid").addClass("field-validation-error").html("");
     		return true;
     	}
